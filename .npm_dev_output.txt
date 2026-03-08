@@ -1,0 +1,72 @@
+
+> thurayya-studio@0.0.0 dev
+> vite
+
+Port 5173 is in use, trying another one...
+Port 5174 is in use, trying another one...
+
+  [32m[1mVITE[22m v5.4.21[39m  [2mready in [0m[1m279[22m[2m[0m ms[22m
+
+  [32m➜[39m  [1mLocal[22m:   [36mhttp://localhost:[1m5175[22m/[39m
+[2m  [32m➜[39m  [1mNetwork[22m[2m: use [22m[1m--host[22m[2m to expose[22m
+[2m[32m  ➜[39m[22m[2m  press [22m[1mh + enter[22m[2m to show help[22m
+[2m1:46:12 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/DiscordAnomaly.jsx, /src/index.css[22m
+[2m1:46:21 AM[22m [36m[1m[vite][22m[39m [32m✨ new dependencies optimized: [33mthree/examples/jsm/loaders/GLTFLoader[32m[39m
+[2m1:46:21 AM[22m [36m[1m[vite][22m[39m [32m✨ optimized dependencies changed. reloading[39m
+[2m1:49:15 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CommLink.jsx, /src/index.css[22m
+[2m1:49:15 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/DiscordAnomaly.jsx, /src/index.css[22m
+[2m1:58:44 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CommLink.jsx, /src/index.css[22m
+[2m2:03:56 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CommLink.jsx, /src/index.css[22m
+[2m2:12:12 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/CommLink.jsx, /src/index.css[22m
+[2m2:38:10 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:38:43 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:38:57 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:39:03 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:39:06 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:39:09 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:39:21 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:39:31 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:40:11 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:40:15 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:40:18 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:40:20 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:40:24 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:40:33 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:40:37 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:40:41 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:40:58 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:42:17 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:42:34 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:42:35 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:42:47 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:43:05 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:43:11 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:43:16 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:43:18 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:43:21 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:43:21 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:43:24 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:43:29 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:43:44 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:43:58 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:44:04 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:44:07 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:44:11 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:44:13 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:44:14 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:44:18 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:44:31 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:44:32 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:44:44 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:44:59 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:45:10 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:45:21 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:45:44 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:46:01 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Projects.jsx, /src/index.css[22m
+[2m2:48:42 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m2:48:58 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m2:49:20 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m2:50:01 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m2:50:15 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m2:50:29 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
+[2m2:50:39 AM[22m [36m[1m[vite][22m[39m [32mhmr update [39m[2m/src/components/Hero.jsx, /src/index.css[22m
