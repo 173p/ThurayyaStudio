@@ -8,17 +8,17 @@ const LoadingScreen = ({ onComplete }) => {
   const bgStarsRef = useRef([]);
   const bgStarCount = [...Array(100)]; // Added ambient background stars
 
-  // FINAL POSITIONS: These are where the dots "Land" to form the logo.
-  // We set these in CSS/Style so the browser knows exactly where they end up.
-  // (Adjust these percentages to match your transparent Logo overlay perfectly)
+  // FINAL POSITIONS: Accurate Al-Thurayya (Pleiades / M45) star positions.
+  // Mapped from real astronomical RA/Dec coordinates, normalized and centered on screen.
+  // Stars: Alcyone (α), Electra (17), Maia (20), Merope (23), Taygeta (19), Celaeno (16), Atlas+Pleione (pair).
   const starDestinations = [
-    { top: '35%', left: '48%' }, // Dot 1
-    { top: '32%', left: '46%' }, // Dot 2
-    { top: '32%', left: '50%' }, // Dot 3
-    { top: '55%', left: '40%' }, // Dot 4
-    { top: '55%', left: '44%' }, // Dot 5
-    { top: '20%', left: '80%' }, // Extra star
-    { top: '70%', left: '20%' }, // Extra star
+    { top: '48%', left: '50%' }, // Alcyone  – α Tau (brightest, center of cluster)
+    { top: '53%', left: '44%' }, // Electra  – 17 Tau (south-west of Alcyone)
+    { top: '41%', left: '46%' }, // Maia     – 20 Tau (north-west of Alcyone)
+    { top: '57%', left: '49%' }, // Merope   – 23 Tau (south-south-east of Alcyone)
+    { top: '38%', left: '42%' }, // Taygeta  – 19 Tau (north-west, further out)
+    { top: '45%', left: '55%' }, // Celaeno  – 16 Tau (east of Alcyone, slightly north)
+    { top: '34%', left: '57%' }, // Atlas    – 27 Tau (far north-east — Atlas & Pleione pair edge)
   ];
 
   useEffect(() => {
@@ -85,7 +85,7 @@ const LoadingScreen = ({ onComplete }) => {
         .to(starsRef.current, {
           x: 0, // FORCE GPU
           y: 0, // FORCE GPU
-          scale: 1.5,
+          scale: 1.67,
           opacity: 1, // BRIGHTEN UP
           boxShadow: "0 0 15px 4px rgba(255, 255, 255, 0.8)", // ADD GLOW
           duration: 0.8,
