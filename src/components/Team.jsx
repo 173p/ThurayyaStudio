@@ -1,6 +1,6 @@
 import React from 'react';
-import { Linkedin } from 'lucide-react';
-import { FaXTwitter } from 'react-icons/fa6';
+import { Linkedin, Instagram } from 'lucide-react';
+import { FaXTwitter, FaTiktok } from 'react-icons/fa6';
 
 const teamMembers = [
     {
@@ -34,11 +34,15 @@ const teamMembers = [
         id: 5,
         codename: 'Utam',
         role: 'Game Artist',
+        instagram: 'https://www.instagram.com/matu_7041'
     },
     {
         id: 6,
         codename: 'irumi',
         role: 'Game Artist',
+        tiktok: 'https://www.tiktok.com/@irumi.rurouni?_r=1&_t=ZS-94XG2UBS61k',
+        instagram: 'https://www.instagram.com/ruroni.irumi/',
+        twitter: 'https://x.com/irumiartz'
     }
 ];
 
@@ -72,6 +76,16 @@ const TeamMemberCard = ({ member, className = "" }) => (
                 {member.twitter && (
                     <a href={member.twitter} target="_blank" rel="noreferrer" className="text-slate-500 p-2 bg-black/40 border border-emerald-500/30 hover:border-emerald-400 hover:text-emerald-400 transition-colors group/icon">
                         <FaXTwitter size={18} className="group-hover/icon:scale-110 transition-transform" />
+                    </a>
+                )}
+                {member.instagram && (
+                    <a href={member.instagram} target="_blank" rel="noreferrer" className="text-slate-500 p-2 bg-black/40 border border-emerald-500/30 hover:border-emerald-400 hover:text-emerald-400 transition-colors group/icon">
+                        <Instagram size={18} className="group-hover/icon:scale-110 transition-transform" />
+                    </a>
+                )}
+                {member.tiktok && (
+                    <a href={member.tiktok} target="_blank" rel="noreferrer" className="text-slate-500 p-2 bg-black/40 border border-emerald-500/30 hover:border-emerald-400 hover:text-emerald-400 transition-colors group/icon">
+                        <FaTiktok size={18} className="group-hover/icon:scale-110 transition-transform" />
                     </a>
                 )}
             </div>
