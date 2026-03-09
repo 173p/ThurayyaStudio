@@ -4,15 +4,15 @@ import { FaDiscord, FaXTwitter, FaTiktok, FaInstagram, FaLinkedinIn } from 'reac
 const Footer = () => {
     return (
         <footer id="footer" className="w-full py-12 bg-slate-950 text-slate-500 font-mono text-xs border-t border-slate-800">
-            <div className="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-8">
+            <div className="container mx-auto px-6 grid grid-cols-3 items-center gap-8">
 
                 {/* Left: Copyright */}
-                <div className="order-3 md:order-1 text-center md:text-left">
+                <div className="text-center md:text-left">
                     <p>&copy; {new Date().getFullYear()} THURAYYA STUDIO. ALL RIGHTS RESERVED.</p>
                 </div>
 
                 {/* Center: Socials */}
-                <div className="order-1 md:order-2 flex gap-6 text-xl text-slate-400">
+                <div className="flex gap-6 text-xl text-slate-400 justify-center">
                     <a href="https://discord.gg/EEkV5d3kbR" target="_blank" rel="noreferrer" className="hover:text-[#00FF9C] hover:drop-shadow-[0_0_8px_rgba(0,255,156,0.8)] hover:-translate-y-1 transition-all duration-300">
                         <FaDiscord />
                     </a>
@@ -31,7 +31,7 @@ const Footer = () => {
                 </div>
 
                 {/* Right: Site Links */}
-                <div className="order-2 md:order-3 flex gap-6">
+                <div className="flex gap-6 justify-end">
                     <a href="#" className="hover:text-white transition-colors">PRESS KIT</a>
                     <a href="#" className="hover:text-white transition-colors">CONTACT</a>
                 </div>
