@@ -4,7 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Projects from './components/Projects';
 import Team from './components/Team';
-import CommLink from './components/CommLink';
+import CommunityNexus from './components/CommunityNexus';
 import Footer from './components/Footer';
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
         <Hero />
         <Projects />
         <Team />
-        <CommLink />
+        <CommunityNexus />
         <Footer />
       </main>
     </>
