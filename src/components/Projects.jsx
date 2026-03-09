@@ -188,15 +188,15 @@ const Projects = () => {
                                 <>
                                     <button
                                         onClick={handlePrev}
-                                        className="absolute -left-16 md:-left-24 top-1/2 -translate-y-1/2 text-white/50 hover:text-red-500 transition-colors hover:scale-110 p-2 z-50"
+                                        className="absolute left-4 md:-left-24 top-1/2 -translate-y-1/2 text-white/70 hover:text-red-500 transition-colors hover:scale-110 p-4 z-50 bg-black/20 md:bg-transparent rounded-full backdrop-blur-sm md:backdrop-blur-none"
                                     >
-                                        <ChevronLeft size={64} strokeWidth={1} />
+                                        <ChevronLeft className="w-8 h-8 md:w-16 md:h-16" strokeWidth={1} />
                                     </button>
                                     <button
                                         onClick={handleNext}
-                                        className="absolute -right-16 md:-right-24 top-1/2 -translate-y-1/2 text-white/50 hover:text-red-500 transition-colors hover:scale-110 p-2 z-50"
+                                        className="absolute right-4 md:-right-24 top-1/2 -translate-y-1/2 text-white/70 hover:text-red-500 transition-colors hover:scale-110 p-4 z-50 bg-black/20 md:bg-transparent rounded-full backdrop-blur-sm md:backdrop-blur-none"
                                     >
-                                        <ChevronRight size={64} strokeWidth={1} />
+                                        <ChevronRight className="w-8 h-8 md:w-16 md:h-16" strokeWidth={1} />
                                     </button>
                                 </>
                             )}
