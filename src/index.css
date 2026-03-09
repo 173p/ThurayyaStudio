@@ -29,131 +29,89 @@ footer {
         z-index: 50;
     }
 
-    .animate-glitch-text {
-        animation: glitch-text 4s infinite;
+    .animate-interface-pulse {
+        animation: interface-pulse 4s infinite ease-in-out;
     }
 
     .bracket-btn {
         position: relative;
         display: inline-block;
-        transition: all 0.2s;
+        transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
         text-decoration: none;
+        overflow: hidden;
+        border: 1px solid rgba(16, 185, 129, 0.3);
     }
 
-    .bracket-btn::before,
-    .bracket-btn::after {
-        content: attr(data-content);
+    /* Subtle shimmer sweep on hover */
+    .bracket-btn::before {
+        content: "";
         position: absolute;
         top: 0;
-        left: 0;
-        opacity: 0;
-        pointer-events: none;
+        left: -100%;
         width: 100%;
         height: 100%;
-    }
-
-    .bracket-btn:hover {
-        animation: glitch-skew 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+        background: linear-gradient(90deg,
+                transparent,
+                rgba(16, 185, 129, 0.15),
+                transparent);
+        transition: none;
+        pointer-events: none;
+        z-index: 1;
     }
 
     .bracket-btn:hover::before {
-        opacity: 0.8;
-        color: #0ff;
-        z-index: -1;
-        animation: glitch-anim 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+        left: 100%;
+        transition: all 0.7s ease-in-out;
+    }
+
+    .bracket-btn:hover {
+        background: rgba(16, 185, 129, 0.08);
+        border-color: rgba(16, 185, 129, 1);
+        box-shadow:
+            0 0 25px rgba(16, 185, 129, 0.15),
+            inset 0 0 10px rgba(16, 185, 129, 0.05);
+        transform: translateY(-1px);
+        letter-spacing: 0.25em;
+    }
+
+    /* Clean bracket highlight without ghosting */
+    .bracket-btn::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                rgba(16, 185, 129, 0.1) 0%,
+                transparent 70%);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
     }
 
     .bracket-btn:hover::after {
-        opacity: 0.8;
-        color: #f00;
-        z-index: -2;
-        animation: glitch-anim2 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+        opacity: 1;
     }
 }
 
-@keyframes glitch-text {
-
-    0%,
-    95% {
-        transform: translate(0);
-        text-shadow: none;
-    }
-
-    96% {
-        transform: translate(-2px, 1px);
-        text-shadow: -2px 0 red, 2px 0 cyan;
-    }
-
-    97% {
-        transform: translate(2px, -1px);
-        text-shadow: 2px 0 red, -2px 0 cyan;
-    }
-
-    98% {
-        transform: translate(-1px, 2px);
-        text-shadow: none;
-    }
-
-    99% {
-        transform: translate(1px, -2px);
-        text-shadow: 2px 0 red, -2px 0 cyan;
-    }
-
-    100% {
-        transform: translate(0);
-        text-shadow: none;
-    }
-}
-
-@keyframes glitch-skew {
+@keyframes interface-pulse {
 
     0%,
     100% {
-        transform: skew(0deg);
+        opacity: 1;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        transform: scale(1);
     }
 
-    20% {
-        transform: skew(-2deg);
-    }
-
-    40% {
-        transform: skew(2deg);
-    }
-
-    60% {
-        transform: skew(-1deg);
-    }
-
-    80% {
-        transform: skew(1deg);
+    50% {
+        opacity: 0.95;
+        text-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+        transform: scale(1.005);
     }
 }
 
-@keyframes glitch-anim {
-    0% {
-        transform: translate(0);
-    }
 
-    20% {
-        transform: translate(-2px, 1px);
-    }
-
-    40% {
-        transform: translate(-1px, -1px);
-    }
-
-    60% {
-        transform: translate(2px, 1px);
-    }
-
-    80% {
-        transform: translate(1px, -2px);
-    }
-
-    100% {
-        transform: translate(0);
-    }
-}
 
 @keyframes glitch-anim2 {
     0% {

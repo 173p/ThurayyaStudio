@@ -38,7 +38,7 @@ const Hero = () => {
             </div>
 
             <div className="relative z-10 text-center flex flex-col items-center mt-[-5vh]">
-                <h1 className="text-6xl md:text-[6.5rem] font-bold tracking-tighter text-white mb-6 drop-shadow-2xl animate-glitch-text">
+                <h1 className="text-6xl md:text-[6.5rem] font-bold tracking-tighter text-white mb-6 drop-shadow-2xl animate-interface-pulse">
                     THURAYYA STUDIO
                 </h1>
                 <p className="text-xl md:text-2xl text-emerald-500 font-mono tracking-[0.3em] mb-12 uppercase">
@@ -46,8 +46,14 @@ const Hero = () => {
                 </p>
                 <a
                     href="#projects"
-                    className="bracket-btn text-emerald-500 font-mono tracking-[0.2em] px-10 py-4 bg-transparent border border-emerald-500/50 hover:bg-emerald-500/10 hover:border-emerald-500 transition-colors text-sm md:text-base font-bold"
-                    data-content="[ EXPLORE TIMELINES ]"
+                    className="bracket-btn text-emerald-500 font-mono tracking-[0.2em] px-10 py-4 bg-transparent border border-emerald-500/50 hover:bg-emerald-500/10 hover:border-emerald-500 transition-all text-sm md:text-base font-bold"
+                    onMouseMove={(e) => {
+                        const rect = e.currentTarget.getBoundingClientRect();
+                        const x = ((e.clientX - rect.left) / rect.width) * 100;
+                        const y = ((e.clientY - rect.top) / rect.height) * 100;
+                        e.currentTarget.style.setProperty('--mouse-x', `${x}%`);
+                        e.currentTarget.style.setProperty('--mouse-y', `${y}%`);
+                    }}
                     onClick={(e) => {
                         e.preventDefault();
                         document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
