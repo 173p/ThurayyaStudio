@@ -14,8 +14,8 @@ function App() {
     <>
       {!loadingDone && <LoadingScreen onComplete={() => setLoadingDone(true)} />}
 
-      {/* App content shows when loading finishes */}
-      <main className={`min-h-screen flex flex-col bg-slate-950 relative ${loadingDone ? 'opacity-100' : 'opacity-0'} transition-opacity duration-1000`}>
+      {/* App content shows underneath! */}
+      <main className="min-h-screen flex flex-col bg-slate-950 relative">
         <div className="absolute inset-0 crt-overlay mix-blend-multiply pointer-events-none z-50" />
         <Navbar />
         <Hero />

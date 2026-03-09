@@ -100,7 +100,25 @@ const LoadingScreen = ({ onComplete }) => {
           ease: "power2.out",
           // Force hardware acceleration on the big image
           force3D: true
-        }, "-=0.4");
+        }, "-=0.4")
+
+        // Step D: The Smooth Cover/Wipe Transition
+        // We scale the logo up but fade it out BEFORE it becomes a giant white block
+        .to(".logo-reveal", {
+          scale: 15, // Reduced scale to avoid covering the whole screen in thick white
+          duration: 1.0,
+          ease: "power3.in"
+        }, "+=0.8")
+        .to(".logo-reveal", {
+          opacity: 0,
+          duration: 0.5, // Fade logo out quickly
+          ease: "power1.out"
+        }, "<") // Start fade at the exact same time
+        .to(containerRef.current, {
+          opacity: 0, // Fade out the entire loading screen smoothly
+          duration: 1.0,
+          ease: "power2.inOut"
+        }, "<"); // sync with logo zoom
 
     }, containerRef);
 
@@ -108,7 +126,7 @@ const LoadingScreen = ({ onComplete }) => {
   }, []);
 
   return (
-    <div ref={containerRef} className="fixed inset-0 bg-[#0a0a1a] flex items-center justify-center z-50 overflow-hidden">
+    <div ref={containerRef} className="fixed inset-0 bg-[#0a0a1a] flex items-center justify-center z-[100] overflow-hidden">
 
       {/* RANDOMLY DRIFTING BACKGROUND STARS */}
       {bgStarCount.map((_, i) => (
