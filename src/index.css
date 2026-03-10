@@ -147,17 +147,20 @@ footer {
     0% {
         background-color: transparent;
     }
+
     10% {
         background-color: rgba(16, 185, 129, 0.1);
         box-shadow: inset 0 0 50px rgba(16, 185, 129, 0.1);
     }
+
     100% {
         background-color: transparent;
     }
 }
 
 .navbar-link-active {
-    color: #10b981 !important; /* emerald-500 */
-    text-shadow: 0 0 10px rgba(16, 185, 129, 0.5);
+    color: #191970 !important;
+    /* midnight-blue */
+    text-shadow: 0 0 10px rgba(25, 25, 112, 0.5);
     transform: translateY(-2px);
 }

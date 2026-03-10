@@ -1,9 +1,12 @@
-import React from 'react';
-import { FaDiscord, FaXTwitter, FaTiktok, FaInstagram, FaLinkedinIn } from 'react-icons/fa6';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { FaDiscord, FaXTwitter, FaTiktok, FaInstagram, FaLinkedinIn, FaEnvelope, FaXmark } from 'react-icons/fa6';
 
 const Footer = () => {
+    const [isContactOpen, setIsContactOpen] = useState(false);
+
     return (
-        <footer id="footer" className="w-full py-12 bg-slate-950 text-slate-500 font-mono text-xs border-t border-slate-800">
+        <footer id="socials" className="w-full py-12 bg-slate-950 text-slate-500 font-mono text-xs border-t border-slate-800">
             <div className="container mx-auto px-6 flex flex-col md:grid md:grid-cols-3 items-center gap-8 text-center md:text-left">
 
                 {/* Left: Copyright - Order 2 on mobile, 1 on desktop */}
@@ -32,11 +35,60 @@ const Footer = () => {
 
                 {/* Right: Site Links - Order 3 on mobile, 3 on desktop */}
                 <div className="flex gap-6 justify-center md:justify-end order-3">
-                    <a href="#" className="hover:text-white transition-colors">PRESS KIT</a>
-                    <a href="#" className="hover:text-white transition-colors">CONTACT</a>
+                    <button
+                        onClick={() => setIsContactOpen(true)}
+                        className="hover:text-white transition-colors cursor-pointer"
+                    >
+                        CONTACT
+                    </button>
                 </div>
 
             </div>
+
+            {/* Contact Modal */}
+            <AnimatePresence>
+                {isContactOpen && (
+                    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+                        <motion.div
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            onClick={() => setIsContactOpen(false)}
+                            className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
+                        />
+                        <motion.div
+                            initial={{ scale: 0.9, opacity: 0, y: 20 }}
+                            animate={{ scale: 1, opacity: 1, y: 0 }}
+                            exit={{ scale: 0.9, opacity: 0, y: 20 }}
+                            className="relative bg-slate-900 border border-slate-700 p-8 rounded-lg shadow-2xl max-w-sm w-full text-center"
+                        >
+                            <button
+                                onClick={() => setIsContactOpen(false)}
+                                className="absolute top-4 right-4 text-slate-500 hover:text-white transition-colors"
+                            >
+                                <FaXmark size={20} />
+                            </button>
+
+                            <div className="w-16 h-16 bg-[#00FF9C]/10 border border-[#00FF9C]/30 rounded-full flex items-center justify-center mx-auto mb-6 text-[#00FF9C]">
+                                <FaEnvelope size={28} />
+                            </div>
+
+                            <h3 className="text-xl font-bold text-white mb-2 tracking-tight">Get in Touch</h3>
+                            <p className="text-slate-400 mb-8 text-sm leading-relaxed">
+                                Feel free to reach out for collaborations or inquiries.
+                            </p>
+
+                            <a
+                                href="mailto:thurayyastudio@gmail.com"
+                                className="block w-full py-4 bg-[#00FF9C] hover:bg-emerald-400 text-black font-bold rounded transition-colors tracking-widest text-sm"
+                            >
+                                thurayyastudio@gmail.com
+                            </a>
+
+                        </motion.div>
+                    </div>
+                )}
+            </AnimatePresence>
         </footer>
     );
 };

@@ -45,7 +45,7 @@ const Hero = () => {
                     CRAFTING TIMELINES
                 </p>
                 <a
-                    href="#projects"
+                    href="#game"
                     className="bracket-btn text-emerald-500 font-mono tracking-[0.2em] px-10 py-4 bg-transparent border border-emerald-500/50 hover:bg-emerald-500/10 hover:border-emerald-500 transition-all text-sm md:text-base font-bold"
                     onMouseMove={(e) => {
                         const rect = e.currentTarget.getBoundingClientRect();
@@ -56,7 +56,7 @@ const Hero = () => {
                     }}
                     onClick={(e) => {
                         e.preventDefault();
-                        document.querySelector('#projects')?.scrollIntoView({ behavior: 'smooth' });
+                        document.querySelector('#game')?.scrollIntoView({ behavior: 'smooth' });
                     }}
                 >
                     [ EXPLORE TIMELINES ]

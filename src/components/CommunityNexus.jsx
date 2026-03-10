@@ -13,9 +13,9 @@ const INDICATORS = {
 };
 
 const SCREEN_COLORS = {
-    PAST: { fg: '#7ec8a0', glow: '#4a9e72', dim: '#3a6e52', outerGlow: 'rgba(74,158,114,0.25)' },
-    PRESENT: { fg: '#00FF9C', glow: '#00e688', dim: '#007a4a', outerGlow: 'rgba(0,255,156,0.35)' },
-    FUTURE: { fg: '#ff6b6b', glow: '#ff3333', dim: '#8b1a1a', outerGlow: 'rgba(255,60,60,0.30)' },
+    PAST: { fg: '#FF9500', glow: '#FF5E00', dim: '#802F00', outerGlow: 'rgba(255,149,0,0.25)' },
+    PRESENT: { fg: '#007AFF', glow: '#0040FF', dim: '#002080', outerGlow: 'rgba(0,122,255,0.35)' },
+    FUTURE: { fg: '#AF52DE', glow: '#5856D6', dim: '#2C2B6B', outerGlow: 'rgba(175,82,222,0.30)' },
 };
 
 /* ─── Static noise canvas overlay ────────────────────────────────── */
@@ -369,7 +369,7 @@ const CommunityNexus = () => {
 
                     {/* eyebrow + headline */}
                     <div className="flex flex-col items-center gap-3">
-                        <p className="text-emerald-500/60 font-mono text-[10px] tracking-[0.5em] uppercase"
+                        <p className="text-[#10b981]/60 font-mono text-[10px] tracking-[0.5em] uppercase"
                             style={{ animation: 'rift-flicker 5s infinite' }}>
                             ◈ &nbsp; TEMPORAL RIFT DETECTED &nbsp; ◈
                         </p>
@@ -441,12 +441,12 @@ const CommunityNexus = () => {
                             }}
                             className="group relative inline-flex items-center gap-3
                                 px-8 py-4
-                                text-emerald-300 font-mono font-bold text-sm tracking-[0.3em] uppercase
-                                hover:text-slate-950
+                                text-slate-300 font-mono font-bold text-sm tracking-[0.3em] uppercase
+                                hover:text-white
                                 transition-all duration-300 hover:-translate-y-0.5 overflow-hidden"
                             style={{
                                 border: '1px solid rgba(16,185,129,0.6)',
-                                background: 'rgba(6,30,20,0.4)',
+                                background: 'rgba(10,10,30,0.4)',
                                 animation: 'rift-border-glow 3s ease-in-out infinite',
                             }}
                         >

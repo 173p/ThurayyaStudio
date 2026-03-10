@@ -55,7 +55,7 @@ const Projects = () => {
     }, [selectedMedia, handleNext, handlePrev]);
 
     return (
-        <section id="projects" className="w-full py-24 bg-slate-950 text-white border-y border-slate-800 relative overflow-hidden">
+        <section id="game" className="w-full py-24 bg-slate-950 text-white border-y border-slate-800 relative overflow-hidden">
             {/* Background Glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-red-900/10 rounded-full blur-[120px] pointer-events-none" />
 
