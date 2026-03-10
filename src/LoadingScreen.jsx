@@ -8,17 +8,16 @@ const LoadingScreen = ({ onComplete }) => {
   const bgStarsRef = useRef([]);
   const bgStarCount = [...Array(100)]; // Added ambient background stars
 
-  // FINAL POSITIONS: Accurate Al-Thurayya (Pleiades / M45) star positions.
-  // Mapped from real astronomical RA/Dec coordinates, normalized and centered on screen.
-  // Stars: Alcyone (α), Electra (17), Maia (20), Merope (23), Taygeta (19), Celaeno (16), Atlas+Pleione (pair).
+  // FINAL POSITIONS: Al-Thurayya (Pleiades / M45) star positions.
+  // Mapped directly from user sketch. Stars ordered: Taygeta, Maia, Alcyone, Electra, Celaeno, Atlas, Merope.
   const starDestinations = [
-    { top: '48%', left: '50%' }, // Alcyone  – α Tau (brightest, center of cluster)
-    { top: '53%', left: '44%' }, // Electra  – 17 Tau (south-west of Alcyone)
-    { top: '41%', left: '46%' }, // Maia     – 20 Tau (north-west of Alcyone)
-    { top: '57%', left: '49%' }, // Merope   – 23 Tau (south-south-east of Alcyone)
-    { top: '38%', left: '42%' }, // Taygeta  – 19 Tau (north-west, further out)
-    { top: '45%', left: '55%' }, // Celaeno  – 16 Tau (east of Alcyone, slightly north)
-    { top: '34%', left: '57%' }, // Atlas    – 27 Tau (far north-east — Atlas & Pleione pair edge)
+    { top: '28%', left: '47%' }, // Taygeta  – upper-left
+    { top: '28%', left: '50%' }, // Maia     – upper-right
+    { top: '44%', left: '49%' }, // Alcyone  – center (brightest)
+    { top: '54%', left: '41%' }, // Electra  – left-center
+    { top: '60%', left: '63%' }, // Celaeno  – right-center
+    { top: '65%', left: '65%' }, // Atlas    – lower-right (Atlas & Pleione pair)
+    { top: '68%', left: '46%' }, // Merope   – lower-center-left
   ];
 
   useEffect(() => {
