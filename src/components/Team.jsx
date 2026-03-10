@@ -8,7 +8,8 @@ const teamMembers = [
         codename: 'Fayhan Bin Rubaian',
         role: 'Co-Founder & CEO',
         linkedin: 'https://www.linkedin.com/in/fayhan-bin-rubaian-088388292/',
-        twitter: 'https://x.com/fayhanexe'
+        twitter: 'https://x.com/fayhanexe',
+        github: 'https://github.com/rubaian'
     },
     {
         id: 2,
@@ -34,13 +35,13 @@ const teamMembers = [
     {
         id: 5,
         codename: 'Utam',
-        role: 'Freelancer',
+        role: 'Freelancer - Game Artist',
         instagram: 'https://www.instagram.com/matu_7041'
     },
     {
         id: 6,
         codename: 'irumi',
-        role: 'Freelancer',
+        role: 'Freelancer - Game Artist',
         tiktok: 'https://www.tiktok.com/@irumi.rurouni?_r=1&_t=ZS-94XG2UBS61k',
         instagram: 'https://www.instagram.com/ruroni.irumi/',
         twitter: 'https://x.com/irumiartz'
@@ -48,7 +49,7 @@ const teamMembers = [
     {
         id: 7,
         codename: 'Marwan Al Ghamdi',
-        role: 'Freelancer - Game Programmer',
+        role: 'Freelancer - Game Developer',
         linkedin: 'https://www.linkedin.com/in/marwan-alghamdi-3b7828194/',
         github: 'https://github.com/Eapk01',
         itchio: 'https://bo-1.itch.io/'
