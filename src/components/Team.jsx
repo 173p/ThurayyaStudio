@@ -20,7 +20,7 @@ const teamMembers = [
     {
         id: 3,
         codename: 'Wael Qubaisi',
-        role: 'Co-Founder & Game Developer',
+        role: 'Co-Founder & Game Programmer',
         linkedin: 'https://www.linkedin.com/in/wael-qubaisi-08874733a/',
         twitter: 'https://x.com/Waelaaqa2',
         github: 'https://github.com/Waelaaq'
@@ -49,7 +49,7 @@ const teamMembers = [
     {
         id: 7,
         codename: 'Marwan Al Ghamdi',
-        role: 'Freelancer - Game Developer',
+        role: 'Freelancer - Game Programmer',
         linkedin: 'https://www.linkedin.com/in/marwan-alghamdi-3b7828194/',
         github: 'https://github.com/Eapk01',
         itchio: 'https://bo-1.itch.io/'
