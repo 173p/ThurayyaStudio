@@ -8,6 +8,40 @@
 
 html {
     scroll-behavior: smooth;
+    scrollbar-width: thin;
+    scrollbar-color: rgba(48, 92, 222, 0.4) rgba(2, 6, 23, 0.6);
+}
+
+/* Custom Scrollbar — WebKit (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(2, 6, 23, 0.6);
+    border-left: 1px solid rgba(48, 92, 222, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, rgba(48, 92, 222, 0.5), rgba(48, 92, 222, 0.3));
+    border-radius: 4px;
+    border: 1px solid rgba(48, 92, 222, 0.2);
+    transition: background 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, rgba(48, 92, 222, 0.8), rgba(48, 92, 222, 0.5));
+    border-color: rgba(48, 92, 222, 0.4);
+    box-shadow: 0 0 8px rgba(48, 92, 222, 0.3);
+}
+
+::-webkit-scrollbar-thumb:active {
+    background: linear-gradient(180deg, rgba(48, 92, 222, 1), rgba(48, 92, 222, 0.7));
+}
+
+::-webkit-scrollbar-corner {
+    background: rgba(2, 6, 23, 0.6);
 }
 
 section,
