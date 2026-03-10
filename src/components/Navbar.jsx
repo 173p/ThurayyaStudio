@@ -38,7 +38,7 @@ const Navbar = () => {
     return (
         <>
             <nav className={`fixed top-0 left-0 w-full z-50 py-2 px-6 font-mono text-sm transition-all duration-300 ${isScrolled
-                ? 'bg-slate-950/90 backdrop-blur-md border-b border-emerald-500/20 shadow-lg'
+                ? 'bg-slate-950/90 backdrop-blur-md border-b border-[#305CDE]/20 shadow-lg'
                 : 'bg-transparent'
                 }`}>
                 <div className="container mx-auto flex items-center justify-between">
@@ -49,7 +49,7 @@ const Navbar = () => {
                             <img
                                 src="/logo-transparent-white.png"
                                 alt="Thurayya Studio"
-                                className="h-16 md:h-20 lg:h-24 object-contain drop-shadow-[0_0_8px_rgba(16,185,129,0.3)] transition-transform hover:scale-105"
+                                className="h-16 md:h-20 lg:h-24 object-contain drop-shadow-[0_0_8px_rgba(48,92,222,0.3)] transition-transform hover:scale-105"
                                 style={{ margin: '-0.5rem 0' }}
                             />
                         </a>
@@ -60,28 +60,28 @@ const Navbar = () => {
                         <a
                             href="#game"
                             onClick={(e) => handleLinkClick(e, 'game')}
-                            className="hover:text-emerald-400 hover:-translate-y-0.5 transition-all whitespace-nowrap"
+                            className="hover:text-[#305CDE] hover:-translate-y-0.5 transition-all whitespace-nowrap"
                         >
                             [ GAME ]
                         </a>
                         <a
                             href="#team"
                             onClick={(e) => handleLinkClick(e, 'team')}
-                            className="hover:text-emerald-400 hover:-translate-y-0.5 transition-all whitespace-nowrap"
+                            className="hover:text-[#305CDE] hover:-translate-y-0.5 transition-all whitespace-nowrap"
                         >
                             [ TEAM ]
                         </a>
                         <a
                             href="#community"
                             onClick={(e) => handleLinkClick(e, 'community')}
-                            className="hover:text-emerald-400 hover:-translate-y-0.5 transition-all whitespace-nowrap"
+                            className="hover:text-[#305CDE] hover:-translate-y-0.5 transition-all whitespace-nowrap"
                         >
                             [ COMMUNITY ]
                         </a>
                         <a
                             href="#socials"
                             onClick={(e) => handleLinkClick(e, 'socials')}
-                            className="hover:text-emerald-400 hover:-translate-y-0.5 transition-all whitespace-nowrap"
+                            className="hover:text-[#305CDE] hover:-translate-y-0.5 transition-all whitespace-nowrap"
                         >
                             [ SOCIALS ]
                         </a>
@@ -93,7 +93,7 @@ const Navbar = () => {
                             href="https://store.steampowered.com/app/3905840/Pexet_Inc/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="hidden md:inline-block border border-emerald-500 text-emerald-400 px-6 py-2.5 hover:bg-emerald-500 hover:text-white hover:shadow-[0_0_20px_rgba(16,185,129,0.5)] transition-all font-bold tracking-widest text-xs"
+                            className="hidden md:inline-block border border-[#305CDE] text-[#305CDE] px-6 py-2.5 hover:bg-[#305CDE] hover:text-white hover:shadow-[0_0_20px_rgba(48,92,222,0.5)] transition-all font-bold tracking-widest text-xs"
                         >
                             [ WISHLIST ON STEAM ]
                         </a>
@@ -101,7 +101,7 @@ const Navbar = () => {
                         {/* Mobile Menu Icon */}
                         <button
                             onClick={() => setIsMenuOpen(true)}
-                            className="lg:hidden text-emerald-400 hover:text-emerald-300 font-bold tracking-widest"
+                            className="lg:hidden text-[#305CDE] hover:text-blue-400 font-bold tracking-widest"
                         >
                             [ MENU ]
                         </button>
@@ -122,7 +122,7 @@ const Navbar = () => {
                         {/* Close Button */}
                         <button
                             onClick={() => setIsMenuOpen(false)}
-                            className="absolute top-8 right-8 text-emerald-400 hover:text-emerald-300 font-bold font-mono tracking-widest text-sm"
+                            className="absolute top-8 right-8 text-[#305CDE] hover:text-blue-400 font-bold font-mono tracking-widest text-sm"
                         >
                             [ CLOSE ]
                         </button>
@@ -145,7 +145,7 @@ const Navbar = () => {
                                     key={link.id}
                                     href={`#${link.id}`}
                                     onClick={(e) => handleLinkClick(e, link.id)}
-                                    className="text-2xl font-bold tracking-[0.3em] text-slate-300 hover:text-emerald-400 transition-colors uppercase font-mono whitespace-nowrap"
+                                    className="text-2xl font-bold tracking-[0.3em] text-slate-300 hover:text-[#305CDE] transition-colors uppercase font-mono whitespace-nowrap"
                                 >
                                     [{link.label}]
                                 </a>
@@ -155,7 +155,7 @@ const Navbar = () => {
                                 href="https://store.steampowered.com/app/3905840/Pexet_Inc/"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="mt-8 border border-emerald-500 text-emerald-400 px-8 py-3 hover:bg-emerald-500 hover:text-white transition-all font-bold tracking-widest text-sm font-mono"
+                                className="mt-8 border border-[#305CDE] text-[#305CDE] px-8 py-3 hover:bg-[#305CDE] hover:text-white transition-all font-bold tracking-widest text-sm font-mono"
                             >
                                 [ WISHLIST ON STEAM ]
                             </a>

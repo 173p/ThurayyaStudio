@@ -41,12 +41,12 @@ const Hero = () => {
                 <h1 className="text-6xl md:text-[6.5rem] font-bold tracking-tighter text-white mb-6 drop-shadow-2xl animate-interface-pulse">
                     THURAYYA STUDIO
                 </h1>
-                <p className="text-xl md:text-2xl text-emerald-500 font-mono tracking-[0.3em] mb-12 uppercase">
+                <p className="text-xl md:text-2xl text-[#305CDE] font-mono tracking-[0.3em] mb-12 uppercase">
                     CRAFTING TIMELINES
                 </p>
                 <a
                     href="#game"
-                    className="bracket-btn text-emerald-500 font-mono tracking-[0.2em] px-10 py-4 bg-transparent border border-emerald-500/50 hover:bg-emerald-500/10 hover:border-emerald-500 transition-all text-sm md:text-base font-bold"
+                    className="bracket-btn text-[#305CDE] font-mono tracking-[0.2em] px-10 py-4 bg-transparent border border-[#305CDE]/50 hover:bg-[#305CDE]/10 hover:border-[#305CDE] transition-all text-sm md:text-base font-bold"
                     onMouseMove={(e) => {
                         const rect = e.currentTarget.getBoundingClientRect();
                         const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -66,7 +66,7 @@ const Hero = () => {
             {/* Scroll Indicator */}
             <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-80 animate-blink">
                 <span className="text-slate-400 font-mono text-[10px] md:text-xs tracking-[0.3em]">SCROLL_DOWN</span>
-                <span className="text-emerald-500 font-mono text-xl md:text-2xl font-bold">V</span>
+                <span className="text-[#305CDE] font-mono text-xl md:text-2xl font-bold">V</span>
             </div>
         </section>
     );

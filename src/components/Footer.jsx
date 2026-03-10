@@ -16,19 +16,19 @@ const Footer = () => {
 
                 {/* Center: Socials - Order 1 on mobile, 2 on desktop */}
                 <div className="flex gap-6 text-xl text-slate-400 justify-center order-1 md:order-2">
-                    <a href="https://discord.gg/EEkV5d3kbR" target="_blank" rel="noreferrer" className="hover:text-[#00FF9C] hover:drop-shadow-[0_0_8px_rgba(0,255,156,0.8)] hover:-translate-y-1 transition-all duration-300">
+                    <a href="https://discord.gg/EEkV5d3kbR" target="_blank" rel="noreferrer" className="hover:text-[#305CDE] hover:drop-shadow-[0_0_8px_rgba(48,92,222,0.8)] hover:-translate-y-1 transition-all duration-300">
                         <FaDiscord />
                     </a>
-                    <a href="https://x.com/ThurayyaStudio" target="_blank" rel="noreferrer" className="hover:text-[#00FF9C] hover:drop-shadow-[0_0_8px_rgba(0,255,156,0.8)] hover:-translate-y-1 transition-all duration-300">
+                    <a href="https://x.com/ThurayyaStudio" target="_blank" rel="noreferrer" className="hover:text-[#305CDE] hover:drop-shadow-[0_0_8px_rgba(48,92,222,0.8)] hover:-translate-y-1 transition-all duration-300">
                         <FaXTwitter />
                     </a>
-                    <a href="https://tiktok.com/@thurayyastudio" target="_blank" rel="noreferrer" className="hover:text-[#00FF9C] hover:drop-shadow-[0_0_8px_rgba(0,255,156,0.8)] hover:-translate-y-1 transition-all duration-300">
+                    <a href="https://tiktok.com/@thurayyastudio" target="_blank" rel="noreferrer" className="hover:text-[#305CDE] hover:drop-shadow-[0_0_8px_rgba(48,92,222,0.8)] hover:-translate-y-1 transition-all duration-300">
                         <FaTiktok />
                     </a>
-                    <a href="https://instagram.com/ThurayyaStudio" target="_blank" rel="noreferrer" className="hover:text-[#00FF9C] hover:drop-shadow-[0_0_8px_rgba(0,255,156,0.8)] hover:-translate-y-1 transition-all duration-300">
+                    <a href="https://instagram.com/ThurayyaStudio" target="_blank" rel="noreferrer" className="hover:text-[#305CDE] hover:drop-shadow-[0_0_8px_rgba(48,92,222,0.8)] hover:-translate-y-1 transition-all duration-300">
                         <FaInstagram />
                     </a>
-                    <a href="https://www.linkedin.com/company/thurayya-studio/?viewAsMember=true" target="_blank" rel="noreferrer" className="hover:text-[#00FF9C] hover:drop-shadow-[0_0_8px_rgba(0,255,156,0.8)] hover:-translate-y-1 transition-all duration-300">
+                    <a href="https://www.linkedin.com/company/thurayya-studio/?viewAsMember=true" target="_blank" rel="noreferrer" className="hover:text-[#305CDE] hover:drop-shadow-[0_0_8px_rgba(48,92,222,0.8)] hover:-translate-y-1 transition-all duration-300">
                         <FaLinkedinIn />
                     </a>
                 </div>
@@ -69,7 +69,7 @@ const Footer = () => {
                                 <FaXmark size={20} />
                             </button>
 
-                            <div className="w-16 h-16 bg-[#00FF9C]/10 border border-[#00FF9C]/30 rounded-full flex items-center justify-center mx-auto mb-6 text-[#00FF9C]">
+                            <div className="w-16 h-16 bg-[#305CDE]/10 border border-[#305CDE]/30 rounded-full flex items-center justify-center mx-auto mb-6 text-[#305CDE]">
                                 <FaEnvelope size={28} />
                             </div>
 
@@ -80,7 +80,7 @@ const Footer = () => {
 
                             <a
                                 href="mailto:thurayyastudio@gmail.com"
-                                className="block w-full py-4 bg-[#00FF9C] hover:bg-emerald-400 text-black font-bold rounded transition-colors tracking-widest text-sm"
+                                className="block w-full py-4 bg-[#305CDE] hover:bg-blue-600 text-white font-bold rounded transition-colors tracking-widest text-sm"
                             >
                                 thurayyastudio@gmail.com
                             </a>

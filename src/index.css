@@ -43,7 +43,7 @@ footer {
         transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1);
         text-decoration: none;
         overflow: hidden;
-        border: 1px solid rgba(16, 185, 129, 0.3);
+        border: 1px solid rgba(48, 92, 222, 0.3);
     }
 
     /* Subtle shimmer sweep on hover */
@@ -56,7 +56,7 @@ footer {
         height: 100%;
         background: linear-gradient(90deg,
                 transparent,
-                rgba(16, 185, 129, 0.15),
+                rgba(48, 92, 222, 0.15),
                 transparent);
         transition: none;
         pointer-events: none;
@@ -69,11 +69,11 @@ footer {
     }
 
     .bracket-btn:hover {
-        background: rgba(16, 185, 129, 0.08);
-        border-color: rgba(16, 185, 129, 1);
+        background: rgba(48, 92, 222, 0.08);
+        border-color: rgba(48, 92, 222, 1);
         box-shadow:
-            0 0 25px rgba(16, 185, 129, 0.15),
-            inset 0 0 10px rgba(16, 185, 129, 0.05);
+            0 0 25px rgba(48, 92, 222, 0.15),
+            inset 0 0 10px rgba(48, 92, 222, 0.05);
         transform: translateY(-1px);
         letter-spacing: 0.25em;
     }
@@ -87,7 +87,7 @@ footer {
         right: 0;
         bottom: 0;
         background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
-                rgba(16, 185, 129, 0.1) 0%,
+                rgba(48, 92, 222, 0.1) 0%,
                 transparent 70%);
         opacity: 0;
         transition: opacity 0.3s ease;
@@ -110,7 +110,7 @@ footer {
 
     50% {
         opacity: 0.95;
-        text-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+        text-shadow: 0 0 20px rgba(48, 92, 222, 0.3);
         transform: scale(1.005);
     }
 }
@@ -153,8 +153,8 @@ footer {
     }
 
     10% {
-        background-color: rgba(16, 185, 129, 0.1);
-        box-shadow: inset 0 0 50px rgba(16, 185, 129, 0.1);
+        background-color: rgba(48, 92, 222, 0.1);
+        box-shadow: inset 0 0 50px rgba(48, 92, 222, 0.1);
     }
 
     100% {
@@ -163,8 +163,8 @@ footer {
 }
 
 .navbar-link-active {
-    color: #191970 !important;
+    color: #305CDE !important;
     /* midnight-blue */
-    text-shadow: 0 0 10px rgba(25, 25, 112, 0.5);
+    text-shadow: 0 0 10px rgba(48, 92, 222, 0.5);
     transform: translateY(-2px);
 }

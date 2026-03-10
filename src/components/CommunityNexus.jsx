@@ -70,7 +70,7 @@ function BackdropCanvas() {
                 const s = i * 137.5;
                 const x = ((s * 0.618) % 1) * W;
                 const y = (((s * 0.382) % 1) * H + t * (8 + s % 6)) % H;
-                const zone = x < W * 0.33 ? '180,83,9' : x > W * 0.67 ? '220,50,50' : '16,185,129';
+                const zone = x < W * 0.33 ? '180,83,9' : x > W * 0.67 ? '220,50,50' : '48,92,222';
                 const a = 0.08 + 0.06 * Math.sin(t + i);
                 ctx.globalAlpha = a;
                 ctx.fillStyle = `rgba(${zone},1)`;
@@ -79,7 +79,7 @@ function BackdropCanvas() {
             // subtle rift line
             const midX = W * 0.5;
             ctx.globalAlpha = 0.05 + 0.03 * Math.sin(t * 1.8);
-            ctx.strokeStyle = '#10b981';
+            ctx.strokeStyle = '#305CDE';
             ctx.lineWidth = 1;
             ctx.beginPath();
             for (let step = 0; step <= 16; step++) {
@@ -324,8 +324,8 @@ const CommunityNexus = () => {
             />
             <style>{`
                 @keyframes rift-border-glow {
-                    0%,100% { box-shadow: 0 0 16px rgba(16,185,129,0.15), inset 0 0 10px rgba(16,185,129,0.04); }
-                    50%     { box-shadow: 0 0 40px rgba(16,185,129,0.3),  inset 0 0 20px rgba(16,185,129,0.07); }
+                    0%,100% { box-shadow: 0 0 16px rgba(48, 92, 222, 0.15), inset 0 0 10px rgba(48, 92, 222, 0.04); }
+                    50%     { box-shadow: 0 0 40px rgba(48, 92, 222, 0.3),  inset 0 0 20px rgba(48, 92, 222, 0.07); }
                 }
                 @keyframes rift-flicker {
                     0%,100% { opacity:1; }
@@ -340,7 +340,7 @@ const CommunityNexus = () => {
                 }
                 .scanline-run {
                     position:absolute; left:0; width:100%; height:2px;
-                    background:rgba(16,185,129,0.06);
+                    background:rgba(48, 92, 222, 0.06);
                     animation:scanline-run 5s linear infinite;
                     pointer-events:none;
                 }
@@ -369,7 +369,7 @@ const CommunityNexus = () => {
 
                     {/* eyebrow + headline */}
                     <div className="flex flex-col items-center gap-3">
-                        <p className="text-[#10b981]/60 font-mono text-[10px] tracking-[0.5em] uppercase"
+                        <p className="text-[#305CDE]/60 font-mono text-[10px] tracking-[0.5em] uppercase"
                             style={{ animation: 'rift-flicker 5s infinite' }}>
                             ◈ &nbsp; TEMPORAL RIFT DETECTED &nbsp; ◈
                         </p>
@@ -445,7 +445,7 @@ const CommunityNexus = () => {
                                 hover:text-white
                                 transition-all duration-300 hover:-translate-y-0.5 overflow-hidden"
                             style={{
-                                border: '1px solid rgba(16,185,129,0.6)',
+                                border: '1px solid rgba(48, 92, 222, 0.6)',
                                 background: 'rgba(10,10,30,0.4)',
                                 animation: 'rift-border-glow 3s ease-in-out infinite',
                             }}
@@ -453,7 +453,7 @@ const CommunityNexus = () => {
                             {/* hover fill */}
                             <span
                                 className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-all duration-300 pointer-events-none"
-                                style={{ background: '#10b981' }}
+                                style={{ background: '#305CDE' }}
                             />
                             {/* shimmer */}
                             <span
