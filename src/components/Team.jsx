@@ -13,9 +13,9 @@ const teamMembers = [
     },
     {
         id: 2,
-        codename: 'Osama Al Mana',
+        codename: 'Soma',
         role: 'Co-Founder & Game Director',
-        linkedin: 'https://www.linkedin.com/in/osamah-almana-8215b733a/'
+        twitter: 'https://x.com/somagamedev'
     },
     {
         id: 3,
