@@ -44,7 +44,7 @@ const teamMembers = [
         role: 'Freelancer - Game Artist',
         tiktok: 'https://www.tiktok.com/@irumi.rurouni?_r=1&_t=ZS-94XG2UBS61k',
         instagram: 'https://www.instagram.com/ruroni.irumi/',
-        twitter: 'https://x.com/irumiartz'
+        twitter: 'https://x.com/irumirurouni'
     },
     {
         id: 7,
