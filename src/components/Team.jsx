@@ -20,7 +20,7 @@ const teamMembers = [
     {
         id: 3,
         codename: 'Wael Qubaisi',
-        role: 'Co-Founder & Game Programmer',
+        role: 'Co-Founder & Game Developer',
         linkedin: 'https://www.linkedin.com/in/wael-qubaisi-08874733a/',
         twitter: 'https://x.com/Waelaaqa2',
         github: 'https://github.com/Waelaaq'

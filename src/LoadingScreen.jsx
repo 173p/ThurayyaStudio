@@ -6,11 +6,14 @@ const LoadingScreen = ({ onComplete }) => {
   const containerRef = useRef(null);
   const starsRef = useRef([]);
   const bgStarsRef = useRef([]);
-  const bgStarCount = [...Array(100)]; // Added ambient background stars
+  const bgStarCount = [...Array(100)];
+  // Resolve synchronously so GSAP always captures refs on the correct first render
+  const [isMobile] = useState(() => typeof window !== 'undefined' && window.innerWidth < 768);
 
-  // FINAL POSITIONS: Al-Thurayya (Pleiades / M45) star positions.
-  // Mapped directly from user sketch. Stars ordered: Taygeta, Maia, Alcyone, Electra, Celaeno, Atlas, Merope.
-  const starDestinations = [
+
+  // DESKTOP: viewport-% positions — spread naturally across the wide screen.
+  // Stars: Taygeta, Maia, Alcyone, Electra, Celaeno, Atlas, Merope.
+  const desktopStars = [
     { top: '28%', left: '47%' }, // Taygeta  – upper-left
     { top: '28%', left: '50%' }, // Maia     – upper-right
     { top: '44%', left: '49%' }, // Alcyone  – center (brightest)
@@ -19,6 +22,20 @@ const LoadingScreen = ({ onComplete }) => {
     { top: '65%', left: '65%' }, // Atlas    – lower-right (Atlas & Pleione pair)
     { top: '68%', left: '46%' }, // Merope   – lower-center-left
   ];
+
+  // MOBILE: pixel positions inside a fixed 260×300px anchor centered on screen.
+  // Locks the cluster shape regardless of portrait viewport ratio.
+  const mobileStars = [
+    { top: 0, left: 78 }, // Taygeta  – upper-left
+    { top: 0, left: 156 }, // Maia     – upper-right
+    { top: 120, left: 122 }, // Alcyone  – center (brightest)
+    { top: 195, left: 0 }, // Electra  – left-center
+    { top: 240, left: 260 }, // Celaeno  – right-center
+    { top: 278, left: 280 }, // Atlas    – lower-right (Atlas & Pleione pair)
+    { top: 300, left: 78 }, // Merope   – lower-center-left
+  ];
+
+  const starDestinations = isMobile ? mobileStars : desktopStars;
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -143,23 +160,53 @@ const LoadingScreen = ({ onComplete }) => {
         />
       ))}
 
-      {/* LOGO STARS (The ones that form the logo) */}
-      {starDestinations.map((pos, i) => (
+      {/* LOGO STARS */}
+      {isMobile ? (
+        // Mobile: fixed-size anchor container keeps shape consistent in portrait
         <div
-          key={i}
-          ref={el => starsRef.current[i] = el}
-          className="absolute bg-white rounded-full opacity-0"
           style={{
-            // Set the FINAL position here. 
-            // GSAP will pull them away and snap them back to this.
-            top: pos.top,
-            left: pos.left,
-            width: '6px',  // Slightly larger base size
-            height: '6px',
-            willChange: 'transform, opacity, box-shadow'
+            position: 'absolute',
+            width: '260px',
+            height: '300px',
+            top: '50%',
+            left: '50%',
+            transform: 'translate(-50%, -50%)',
           }}
-        />
-      ))}
+        >
+          {starDestinations.map((pos, i) => (
+            <div
+              key={i}
+              ref={el => starsRef.current[i] = el}
+              className="absolute bg-white rounded-full opacity-0"
+              style={{
+                top: pos.top,
+                left: pos.left,
+                width: '6px',
+                height: '6px',
+                willChange: 'transform, opacity, box-shadow'
+              }}
+            />
+          ))}
+        </div>
+      ) : (
+        // Desktop: viewport-% positions spread naturally across the wide screen
+        <>
+          {starDestinations.map((pos, i) => (
+            <div
+              key={i}
+              ref={el => starsRef.current[i] = el}
+              className="absolute bg-white rounded-full opacity-0"
+              style={{
+                top: pos.top,
+                left: pos.left,
+                width: '6px',
+                height: '6px',
+                willChange: 'transform, opacity, box-shadow'
+              }}
+            />
+          ))}
+        </>
+      )}
 
       {/* OFFICER */}
       <div className="officer-sprite relative z-10 flex flex-col items-center">
