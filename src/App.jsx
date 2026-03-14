@@ -25,7 +25,7 @@ function App() {
         <CommunityNexus />
         <Footer />
       </main>
-      <Analytics />
+      <Analytics debug={false} />
     </>
   );
 }
