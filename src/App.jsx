@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import LoadingScreen from './LoadingScreen';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -24,6 +25,7 @@ function App() {
         <CommunityNexus />
         <Footer />
       </main>
+      <Analytics />
     </>
   );
 }
