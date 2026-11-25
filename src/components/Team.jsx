@@ -2,7 +2,7 @@ import React from 'react';
 import { Linkedin, Instagram } from 'lucide-react';
 import { FaXTwitter, FaTiktok, FaGithub, FaItchIo } from 'react-icons/fa6';
 
-const teamMembers = [
+export const teamMembers = [
     {
         id: 1,
         codename: 'Fayhan Bin Rubaian',

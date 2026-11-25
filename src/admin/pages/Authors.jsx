@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react';
 import { sb, authorsAction, adminUrl, friendlyError } from '../client';
 import { uploadImage } from '../media';
 import { AuthorAvatar } from '../../blog/components';
+import { teamMembers } from '../../components/Team';
 import { Btn, ConfirmDelete, ErrorNote, Field, Modal, PageHead, inputCls, timeAgo, useAdmin, useToast } from '../ui';
+
+const findTeam = (name) => teamMembers.find((m) => m.codename.toLowerCase() === name.trim().toLowerCase());
+const teamFields = (m) => ({ role_title: m.role || '', x_url: m.twitter || '', linkedin_url: m.linkedin || '', github_url: m.github || '' });
 
 const STATUS_COLOR = { ACTIVE: '#4ade80', INVITED: '#FFB340', REVOKED: '#94a3b8' };
 
@@ -82,6 +86,15 @@ function EditAuthor({ author, isSelf, onClose, onSaved }) {
                     </select>
                 </Field>
             </div>
+            {findTeam(form.display_name) && (
+                <button
+                    type="button"
+                    onClick={() => setForm((x) => ({ ...x, ...teamFields(findTeam(form.display_name)) }))}
+                    className="mt-4 w-full min-h-[40px] border border-dashed border-slate-700 text-[11px] tracking-[0.2em] text-slate-400 hover:text-white hover:border-[#305CDE]"
+                >
+                    [ FILL TITLE AND LINKS FROM TEAM SECTION ]
+                </button>
+            )}
             <p className="my-4 text-[11px] text-slate-500 leading-relaxed">Name, title and photo appear on this author's posts. Arabic versions are used on the Arabic blog.</p>
             <ErrorNote>{error}</ErrorNote>
             <div className="flex gap-3 mt-4">
@@ -105,7 +118,9 @@ function InviteAuthor({ onClose, onSent }) {
         setBusy(true);
         setError('');
         try {
-            await authorsAction('invite', { email, display_name: name, access_role: role, redirect_to: adminUrl('/') });
+            const member = findTeam(name);
+            const res = await authorsAction('invite', { email, display_name: member ? member.codename : name, access_role: role, redirect_to: adminUrl('/') });
+            if (member && res?.id) await sb.from('authors').update(teamFields(member)).eq('id', res.id);
             toast(`Invite sent to ${email.trim()}.`);
             onSent();
         } catch (err) {
@@ -120,7 +135,11 @@ function InviteAuthor({ onClose, onSent }) {
                 <div className="text-[11px] tracking-[0.3em] text-[#7B9BF5] font-bold">NEW PERSONNEL FILE</div>
                 <p className="font-sans text-xl font-bold m-0">Invite an author</p>
                 <Field label="EMAIL"><input type="email" required autoFocus value={email} onChange={(e) => setEmail(e.target.value)} placeholder="name@thurayyastudio.com" className={inputCls} /></Field>
-                <Field label="DISPLAY NAME"><input required value={name} onChange={(e) => setName(e.target.value)} placeholder="Shown on their posts" className={inputCls} /></Field>
+                <Field label="DISPLAY NAME">
+                    <input required list="team-names" value={name} onChange={(e) => setName(e.target.value)} placeholder="Shown on their posts" className={inputCls} />
+                    <datalist id="team-names">{teamMembers.map((m) => <option key={m.id} value={m.codename} />)}</datalist>
+                </Field>
+                {findTeam(name) && <p className="-mt-2 m-0 text-[11px] text-[#4ade80] tracking-normal leading-relaxed">Matches the Team section: {findTeam(name).role}. Their title and links will be filled in.</p>}
                 <Field label="ACCESS ROLE">
                     <select value={role} onChange={(e) => setRole(e.target.value)} className={inputCls}>
                         <option value="editor">EDITOR</option>
