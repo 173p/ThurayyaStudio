@@ -6,6 +6,9 @@ export default {
     ],
     theme: {
         extend: {
+            fontFamily: {
+                arabic: ['"IBM Plex Sans Arabic"', 'Tahoma', 'sans-serif'],
+            },
             keyframes: {
                 scanline: {
                     '0%': { transform: 'translateY(-100%)' },
