@@ -191,7 +191,7 @@ function Writer({ post, lang, set, onPickImage, onAskUrl, onInsert, bodyRef }) {
                     aria-label={ar ? 'Arabic post body' : 'English post body'}
                     value={post[`body_${lang}`]}
                     onChange={(e) => set(`body_${lang}`, e.target.value)}
-                    placeholder={ar ? '## 01 // العنوان الفرعي\n\nاكتب المقال هنا.\n\n> ملاحظة اختيارية' : '## 01 // SECTION HEADING\n\nWrite the post here.\n\n> Optional system note'}
+                    placeholder={ar ? '## 01 // العنوان الفرعي\n\nاكتب المقال هنا.' : '## 01 // SECTION HEADING\n\nWrite the post here.'}
                     className={`block w-full min-h-[460px] bg-transparent border-0 p-[22px] text-slate-300 leading-[1.8] resize-y focus:outline-none ${ar ? 'font-arabic text-base' : 'font-mono text-[15px]'}`}
                 />
             </div>

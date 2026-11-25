@@ -233,12 +233,12 @@ export default function Authors() {
                                     <div className="flex justify-between"><span>POSTS</span><span className="text-slate-300">{p.posts}</span></div>
                                     <div className="flex justify-between"><span>LAST SIGN-IN</span><span className="text-slate-300">{p.status === 'INVITED' ? 'Never' : timeAgo(p.last)}</span></div>
                                 </div>
-                                <div className="flex gap-2.5 mt-auto">
-                                    <Btn className="flex-1 px-2 text-[11px] tracking-[0.12em]" onClick={() => setEditing(p)}>[ EDIT ]</Btn>
-                                    {p.status === 'INVITED' && <Btn variant="outline" className="flex-1 px-2 text-[11px] tracking-[0.12em]" busy={busyId === p.id} onClick={() => act('resend', p, `Invite re-sent to ${p.email}.`)}>[ RESEND ]</Btn>}
+                                <div className="flex flex-wrap gap-2 mt-auto">
+                                    <Btn className="flex-1 min-w-[80px] px-1.5 text-[11px] tracking-[0.1em]" onClick={() => setEditing(p)}>[ EDIT ]</Btn>
+                                    {p.status === 'INVITED' && <Btn variant="outline" className="flex-1 min-w-[80px] px-1.5 text-[11px] tracking-[0.1em]" busy={busyId === p.id} onClick={() => act('resend', p, `Invite re-sent to ${p.email}.`)}>[ RESEND ]</Btn>}
                                     {!self && (p.status === 'REVOKED'
-                                        ? <Btn variant="outline" className="flex-1 px-2 text-[11px] tracking-[0.12em]" busy={busyId === p.id} onClick={() => act('restore', p, `${p.display_name} can sign in again.`)}>[ RESTORE ]</Btn>
-                                        : <Btn variant="danger" className="flex-1 px-2 text-[11px] tracking-[0.12em]" onClick={() => setRevoke(p)}>[ REVOKE ]</Btn>)}
+                                        ? <Btn variant="outline" className="flex-1 min-w-[80px] px-1.5 text-[11px] tracking-[0.1em]" busy={busyId === p.id} onClick={() => act('restore', p, `${p.display_name} can sign in again.`)}>[ RESTORE ]</Btn>
+                                        : <Btn variant="danger" className="flex-1 min-w-[80px] px-1.5 text-[11px] tracking-[0.1em]" onClick={() => setRevoke(p)}>[ REVOKE ]</Btn>)}
                                 </div>
                             </div>
                         );
